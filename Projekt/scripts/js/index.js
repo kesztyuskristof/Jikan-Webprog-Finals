@@ -42,8 +42,31 @@ async function getAnime()
 
         mainTable.appendChild(thead);
         mainTable.appendChild(tbody);
+
+        const caption = document.createElement("caption");
+        caption.innerHTML = "Anime List";
+        mainTable.appendChild(caption);
+
+        const headerRow = document.createElement("tr");
+        thead.appendChild(headerRow);
+
+        const th1 = document.createElement("th");
+        th1.innerHTML = "Title";
+        headerRow.appendChild(th1);
+
+        const th2 = document.createElement("th");
+        th2.innerHTML = "Episodes";
+        headerRow.appendChild(th2);
+
+        const th3 = document.createElement("th");
+        th3.innerHTML = "Score";
+        headerRow.appendChild(th3);
+
+        const th4 = document.createElement("th");
+        th4.innerHTML = "Image";
+        headerRow.appendChild(th4);
     }
-    
+
     else
     {
         mainTable = document.getElementById("animeTable");
