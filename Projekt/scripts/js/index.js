@@ -10,4 +10,18 @@ async function getAnime()
     if (animeName.trim() === "") return;
 
     input.value = "";
+
+    
+    const url = `${baseUrl}?q=${animeName}&limit=1`;
+
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const anime = data.data[0];
+
+    if (!anime)
+    {
+        alert("Anime not found!");
+        return;
+    }
 }
