@@ -1,0 +1,88 @@
+body
+{
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 15px;
+}
+
+input
+{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button
+{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background: #22c55e;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background: #16a34a;
+}
+
+/* Table */
+table
+{
+    width: 85%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+caption
+{
+    background: linear-gradient(to right, #22c55e, #4ade80);
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+
+thead
+{
+    background: rgba(0,0,0,0.6);
+}
+
+th, td
+{
+    padding: 12px;
+    text-align: center;
+}
+
+tbody tr:hover
+{
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.01);
+}
+
+img
+{
+    width: 70px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+img:hover
+{
+    transform: scale(1.2);
+}

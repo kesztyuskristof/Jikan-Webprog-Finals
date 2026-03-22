@@ -72,4 +72,33 @@ async function getAnime()
         mainTable = document.getElementById("animeTable");
         tbody = mainTable.tBodies[0];
     }
+
+
+    const row = document.createElement("tr");
+
+    const titleCell = document.createElement("td");
+    titleCell.innerHTML = anime.title ? anime.title : "-";
+    row.appendChild(titleCell);
+
+    const epCell = document.createElement("td");
+    epCell.innerHTML = anime.episodes ? anime.episodes : "-";
+    row.appendChild(epCell);
+
+    const scoreCell = document.createElement("td");
+    scoreCell.innerHTML = anime.score ? anime.score : "-";
+    row.appendChild(scoreCell);
+
+    const imgCell = document.createElement("td");
+    const img = document.createElement("img");
+
+    img.src = anime.images.jpg.image_url;
+    img.alt = anime.title;
+
+    imgCell.appendChild(img);
+    row.appendChild(imgCell);
+
+    tbody.appendChild(row);
+
+
+    animeCounter++;
 }
