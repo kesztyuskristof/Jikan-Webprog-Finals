@@ -11,7 +11,7 @@ async function getAnime()
 
     input.value = "";
 
-    
+
     const url = `${baseUrl}?q=${animeName}&limit=1`;
 
     const res = await fetch(url);
@@ -23,5 +23,30 @@ async function getAnime()
     {
         alert("Anime not found!");
         return;
+    }
+
+
+    let mainTable = null;
+    const mainContainer = document.getElementById("container");
+    let tbody = null;
+
+    if (animeCounter === 0)
+    {
+        mainTable = document.createElement("table");
+        mainTable.id = "animeTable";
+
+        mainContainer.appendChild(mainTable);
+
+        const thead = document.createElement("thead");
+        tbody = document.createElement("tbody");
+
+        mainTable.appendChild(thead);
+        mainTable.appendChild(tbody);
+    }
+    
+    else
+    {
+        mainTable = document.getElementById("animeTable");
+        tbody = mainTable.tBodies[0];
     }
 }
