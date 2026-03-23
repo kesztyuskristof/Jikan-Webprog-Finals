@@ -1,8 +1,6 @@
 
 # A projektet készítették:
-- Név1
-- Név2
+- Kesztyűs Kristóf
 
 # Következő API-kat használtuk:
-- Api1
-- Api2
+- Jikan
